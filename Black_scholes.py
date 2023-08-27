@@ -136,7 +136,7 @@ fig.suptitle("Premium Prices against Various Strikes")
 from sklearn.metrics import mean_squared_error
 R=m.sqrt(mean_squared_error(df1call['pred_LTP'],df1call['LTP'].astype(float)))
 b=m.sqrt(mean_squared_error(df2call['pred_LTP'],df2call['LTP'].astype(float)))
-c=m.sqrt(mean_squared_error(df1call['put_p'],df2call['LTP_put'].astype(float)))
+c=m.sqrt(mean_squared_error(df1call['put_p'],df1call['LTP_put'].astype(float)))
 d=m.sqrt(mean_squared_error(df2call['put_p'],df2call['LTP_put'].astype(float)))
 
 data={'31Aug':[R,c],'7Sep':[b,d]}
